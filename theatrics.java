@@ -18,7 +18,7 @@ public class theatrics {
         // system starts here
         while (Stop != 1) {
             // display movie info and name
-            System.out.println("A: Movie A");
+            System.out.println("A: Movie A");//addition
 
             // movie selection and power off initiation
             System.out.print("Select the movie you want to book(Type A,B or C):");
