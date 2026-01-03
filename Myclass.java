@@ -3,15 +3,14 @@ import java.util.Scanner;
 public class theatrics {
     public static void main(String[] args) {
         // place to initialise variables
-
-        String[] actual_seat = new String[10];// global seating booking
+        String[] Example_Seat
+        
 
         Scanner keyboard = new Scanner(System.in);
         String Movie_selected;
         // initialiser for array
-        for (int i = 1; i <= 4; ++i) {
-            actual_seat[i] = "" + i;
-        }
+
+        
         // var to make inf loop
         int Stop = 0;
         ;
@@ -26,7 +25,7 @@ public class theatrics {
 
             // power off sequence verification
             if ("P".equals(Movie_selected)) {
-                System.out.print("Shut down system?(Enter Y to shut down):");
+                System.out.print("Shut down system?(Enter \"Y\" to shut down):");
                 String declaration;
                 declaration = keyboard.next();
                 if ("Y".equals(declaration)) {
@@ -49,22 +48,27 @@ public class theatrics {
                 }
                 String[] selected_seat = new String[6];
                 for (int i = 1; i <= num; i++) {
+
+                    // User input
                     String Seat_Row;
                     int Seat_position;
+
                     // example of booking screen for client
                     System.out.println("A " + current_seat[1] + " " + current_seat[2] + " B");
                     System.out.println("B " + current_seat[3] + " " + current_seat[4] + " B");
 
                     System.out.print("Type in  the row that you want to book the seat in(type either A,B):");
+                    // Enter the row
                     Seat_Row = keyboard.next();
 
                     System.out.print("Type the seat number that you want to book(either 1,2,3,4):");
+                    // request user to enter seat position in the row
                     Seat_position = keyboard.nextInt();
 
-                    if ("A".equals(Seat_Row)) {
+                    if ("A".equals(Seat_Row)) {// row A
                         current_seat[Seat_position] = "B";
-                    } else if ("B".equals(Seat_Row)) {
-                        current_seat[Seat_position + 8] = "B";
+                    } else if ("B".equals(Seat_Row)) {// row B
+                        current_seat[Seat_position + 2] = "B";
                     }
                     selected_seat[i] = Seat_Row + Seat_position;
                 }
@@ -81,6 +85,8 @@ public class theatrics {
                 // area to calculate payment
                 System.out.println("your payment is here");
                 finish_booking = "Y";
+
+                System.out.println("Thank you for your purchase:");
             }
         }
         // System off
