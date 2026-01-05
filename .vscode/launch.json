@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "PROJECT_PCP_OCTOBER_2025_a7eabca"
+        },
+        {
+            "type": "java",
+            "name": "inputvalidation",
+            "request": "launch",
+            "mainClass": "inputvalidation",
+            "projectName": "PROJECT_PCP_OCTOBER_2025_a7eabca"
+        },
+        {
+            "type": "java",
             "name": "Myclass",
             "request": "launch",
             "mainClass": "Myclass",

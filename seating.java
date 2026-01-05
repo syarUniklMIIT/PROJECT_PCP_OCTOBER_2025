@@ -1,7 +1,7 @@
 public class seating {
 
     // display for the booking screen
-    public static void display(String[] seat) {
+    void display(String[] seat) {
         System.out.println("____________________________________________________|");
         System.out.println("                Theater Screen                      |");
         System.out.println("____________________________________________________|\n");
@@ -17,7 +17,7 @@ public class seating {
         System.err.println("  | ╚═══╝╚═══╝   ╚═══╝╚═══╝╚═══╝╚═══╝    ╚═══╝╚═══╝ | ");
     }
 
-    public static void initialiser(String[] origin, String[] seat) {
+    void initialiser(String[] origin, String[] seat) {
         for (int i = 0; i < origin.length; i++) {
             seat[i] = origin[i];
         }
