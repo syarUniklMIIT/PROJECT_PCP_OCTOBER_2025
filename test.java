@@ -5,6 +5,8 @@ public class test {
 public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
     inputvalidation inputvalidation = new inputvalidation();
+    seating seats = new seating();
+    System.out.println(seats.available[0]);
     // test for A,B,C,D,E,F
     // test for range(1,9) include 1 and 9
     // test for A,B,C movie selection
