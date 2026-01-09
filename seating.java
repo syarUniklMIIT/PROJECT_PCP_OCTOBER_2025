@@ -107,19 +107,19 @@ public class seating {
 
     // finding the row and seat position array code
     int pos(String Row, int seat_position) {
-        int code = 0;
+        int code = 0;// initialise it since it wont work without it
         if (Row.equals("A")) {
             code = seat_position - 1;
         } else if (Row.equals("B")) {
             code = seat_position + 7;
         } else if (Row.equals("C")) {
-            code = seat_position + 14;
+            code = seat_position + 15;
         } else if (Row.equals("D")) {
-            code = seat_position + 21;
+            code = seat_position + 23;
         } else if (Row.equals("E")) {
-            code = seat_position + 28;
+            code = seat_position + 29;
         } else if (Row.equals("F")) {
-            code = seat_position + 35;
+            code = seat_position + 39;
         }
         return code;
     }

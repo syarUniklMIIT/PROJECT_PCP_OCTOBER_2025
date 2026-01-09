@@ -80,8 +80,9 @@ public class Myclass {
             System.out.println("\n-------------------------------");
             System.out.println("         PAYMENT SUMMARY         ");
             System.out.println("---------------------------------");
-            System.out.println("Total Amount to Pay:RM" + total_price);
-            System.out.println();
+            System.out.print("Total Amount to Pay:RM");
+            System.out.printf("%.2f", total_price);
+            System.out.println("\n");
             System.out.println("Please proceed with payment......");
             System.out.println("---------------------------------");
 
@@ -126,12 +127,13 @@ public class Myclass {
         int[] seats_available = { 48, 48, 48, 48, 48, 48 };
 
         // created a variable for all the show times available for each movie
-        String[] TA1 = new String[TEX.length];
-        String[] TA2 = new String[TEX.length];
-        String[] TB1 = new String[TEX.length];
-        String[] TB2 = new String[TEX.length];
-        String[] TC1 = new String[TEX.length];
-        String[] TC2 = new String[TEX.length];
+        String[] TA1 = new String[48];
+        System.out.println(TEX.length);
+        String[] TA2 = new String[48];
+        String[] TB1 = new String[48];
+        String[] TB2 = new String[48];
+        String[] TC1 = new String[48];
+        String[] TC2 = new String[48];
 
         // copy from TEX array to array for each show time
         seats.copy(TEX, TA1);
@@ -142,7 +144,7 @@ public class Myclass {
         seats.copy(TEX, TC2);
 
         // all Movie names
-        String[] Movie = { "Avengers", "Inception", "Spirited Away" };
+        String[] Movie = { "Avengers     ", "Inception    ", "Spirited Away" };
         // all show times
         String[] ShowTime = { "11:00 AM", "08:00 PM", "13:00 PM", "09:00 PM", "14:00 PM", "05:00 PM" };
         // all movie prices regardless of age
@@ -157,18 +159,21 @@ public class Myclass {
             System.out.println("==========================================================");
             System.out.println("                   TGV CINEMA                           ");
             System.out.println("==========================================================");
-            System.out.println("A:" + Movie[0]);
-            System.out.println("Show time available:");
-            System.out.println("1.  " + ShowTime[0] + "||" + seats_available[0] + " seat(s) available.");
-            System.out.println("2.  " + ShowTime[1] + "||" + seats_available[1] + " seat(s) available.");
+            System.out.print("A:" + Movie[0] + " | RM");
+            System.out.printf("%.2f", Movie_prices[0]);// prints the Movie price into 2 decimals
+            System.out.println("\nShow time available:");
+            System.out.println("| 1 |  " + ShowTime[0] + "||" + seats_available[0] + " seat(s) available.");
+            System.out.println("| 2 |  " + ShowTime[1] + "||" + seats_available[1] + " seat(s) available.");
             System.out.println("-----------------------------------------------------------");
-            System.out.println("B:" + Movie[1]);
-            System.out.println("Show time available:");
-            System.out.println("1. " + ShowTime[2] + "||" + seats_available[2] + " seat(s) available.");
-            System.out.println("2. " + ShowTime[3] + "||" + seats_available[3] + " seat(s) available.");
+            System.out.print("B:" + Movie[1] + " | RM");
+            System.out.printf("%.2f", Movie_prices[1]);// prints the Movie price into 2 decimals
+            System.out.println("\nShow time available:");
+            System.out.println("| 1 | " + ShowTime[2] + "||" + seats_available[2] + " seat(s) available.");
+            System.out.println("| 2 | " + ShowTime[3] + "||" + seats_available[3] + " seat(s) available.");
             System.out.println("------------------------------------------------------------");
-            System.out.println("C:" + Movie[2]);
-            System.out.println("Show time available:");
+            System.out.print("C:" + Movie[2] + " | RM");
+            System.out.printf("%.2f", Movie_prices[2]);// prints the Movie price into 2 decimals
+            System.out.println("\nShow time available:");
             System.out.println("| 1 |" + ShowTime[4] + "|| " + seats_available[4] + " seat(s) available.");
             System.out.println("| 2 |" + ShowTime[5] + "|| " + seats_available[5] + " seat(s) available.");
             System.out.println("=============================================================");
