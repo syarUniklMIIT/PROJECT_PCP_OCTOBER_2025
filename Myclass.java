@@ -116,7 +116,7 @@ public class Myclass {
         seating seats = new seating();
         ticket ticket = new ticket();
 
-        String Movie_selected = "A";
+        String Movie_selected = "A";// iniy
         int Time_selected = 1;
         // initialiser for array
         String[] TEX = { "1", "2", "3", "4", "5", "6", "7", "8", "1", "2", "3", "4", "5", "6", "7", "8", "1",
