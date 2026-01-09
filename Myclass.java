@@ -124,11 +124,10 @@ public class Myclass {
                 "2", "3", "4", "5", "6", "7", "8", "1", "2", "3", "4", "5", "6", "7", "8", "1", "2", "3", "4", "5", "6",
                 "7", "8", "1", "2", "3", "4", "5", "6", "7", "8" };
 
-        int[] seats_available = { 48, 48, 48, 48, 48, 48 };
+        int[] seats_available = { 48, 48, 48, 48, 48, 5 };
 
         // created a variable for all the show times available for each movie
         String[] TA1 = new String[48];
-        System.out.println(TEX.length);
         String[] TA2 = new String[48];
         String[] TB1 = new String[48];
         String[] TB2 = new String[48];
@@ -150,6 +149,7 @@ public class Myclass {
         // all movie prices regardless of age
         double[] Movie_prices = { 15.00, 18.00, 20.00 };
         int Movie_Index;// used to determine the price of the tickets
+        int num = 0;// var for amount of seats the user want to book
         // var to make inf loop
         int system_start = 0;
 
@@ -193,9 +193,8 @@ public class Myclass {
                 if (Movie_selected.equals("P")) {// if the user inputs P
                     break;// break out of this loop and goes to power off confirmation...
                 }
-                ;
 
-                // validate if the user entered a integer and its only 1,2 or 2 only
+                // validate if the user entered a integer and its only 1,2 only
                 Time_selected = inputvalidation.time_slot(keyboard,
                         "Enter the time slot you want to book for (1 or 2 )");
                 int check_here = seats.availability(seats_available, Movie_selected, Time_selected);
@@ -203,9 +202,19 @@ public class Myclass {
                 if (check_here == 0) {// repeat since they cant buy anything since all seats are taken
                     System.out.println("The time slot selected has sold out...");
                 } else {
-                    break;// break out of the infinite while loop
-                }
+                    // request input from user and validates it making sure its at max 6
+                    num = inputvalidation.amount_seat(keyboard, "Enter amount of seat to book(max 6 ):");
+                    if (seats_available[seats.array_code(Movie_selected, Time_selected)] < num) {
+                        System.out.println(
+                                "The amount of seats that want to book exceeds the amount of seats available...");
+                        System.out.println("Enter anything to continue....");
+                        String hello = keyboard.next();
+                        continue;
 
+                    } else {
+                        break;// break out of the infinite while loop
+                    }
+                }
             }
 
             // power off sequence confirmation....
@@ -220,9 +229,9 @@ public class Myclass {
             }
             // select amount of seats to book(max 6)
             // created variable for amount of seats user wanted to book
-            int num;
+
             // validate if the user entered a integer and its more than 0 and less than 6
-            num = inputvalidation.amount_seat(keyboard, "Enter amount of seat to book(max 6 ):");
+
             // set the amount values for the ticket seat array to store
 
             // if else statement for booking
