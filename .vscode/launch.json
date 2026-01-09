@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ticket",
+            "request": "launch",
+            "mainClass": "ticket",
+            "projectName": "PROJECT_PCP_OCTOBER_2025_a7eabca"
+        },
+        {
+            "type": "java",
             "name": "test",
             "request": "launch",
             "mainClass": "test",

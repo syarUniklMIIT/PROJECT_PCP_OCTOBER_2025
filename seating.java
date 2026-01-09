@@ -53,9 +53,10 @@ public class seating {
 
     // display for the booking screen
     void display(String[] seat) {
-        System.out.println("____________________________________________________|");
-        System.out.println("                Theater Screen                      |");
-        System.out.println("____________________________________________________|\n");
+
+        System.out.println("   _________________________________________________");
+        System.out.println("  |                 Theater Screen                  |");
+        System.out.println("  |_________________________________________________|\n");
         // ----------------------------------A-----------------------------------------------------
         System.out.println(
                 "A | ║ " + seat[0] + " ║║ " + seat[1] + " ║   ║ " + seat[2] + " ║║ " + seat[3] + " ║║ " + seat[4]
@@ -69,32 +70,35 @@ public class seating {
         System.err.println("  | ╚═══╝╚═══╝   ╚═══╝╚═══╝╚═══╝╚═══╝    ╚═══╝╚═══╝ | ");
         // ------------------------------------------------------------C----------------------------------
         System.out.println(
-                "B | ║ " + seat[16] + " ║║ " + seat[17] + " ║   ║ " + seat[18] + " ║║ " + seat[19] + " ║║ " + seat[20]
-                        + " ║║ " + seat[21] + " ║    ║ " + seat[21] + " ║║ " + seat[23] + " ║ | B");
+                "C | ║ " + seat[16] + " ║║ " + seat[17] + " ║   ║ " + seat[18] + " ║║ " + seat[19] + " ║║ " + seat[20]
+                        + " ║║ " + seat[21] + " ║    ║ " + seat[21] + " ║║ " + seat[23] + " ║ | C");
 
         System.err.println("  | ╚═══╝╚═══╝   ╚═══╝╚═══╝╚═══╝╚═══╝    ╚═══╝╚═══╝ | ");
         // ----------------------------------------D--------------------------------------------------------
         System.out.println(
-                "B | ║ " + seat[24] + " ║║ " + seat[25] + " ║   ║ " + seat[26] + " ║║ " + seat[27] + " ║║ " + seat[28]
-                        + " ║║ " + seat[29] + " ║    ║ " + seat[30] + " ║║ " + seat[31] + " ║ | B");
+                "D | ║ " + seat[24] + " ║║ " + seat[25] + " ║   ║ " + seat[26] + " ║║ " + seat[27] + " ║║ " + seat[28]
+                        + " ║║ " + seat[29] + " ║    ║ " + seat[30] + " ║║ " + seat[31] + " ║ | D");
 
         System.err.println("  | ╚═══╝╚═══╝   ╚═══╝╚═══╝╚═══╝╚═══╝    ╚═══╝╚═══╝ | ");
         // -----------------------------------------------E--------------------------------------------------
         System.out.println(
-                "B | ║ " + seat[32] + " ║║ " + seat[33] + " ║   ║ " + seat[34] + " ║║ " + seat[35] + " ║║ " + seat[36]
-                        + " ║║ " + seat[37] + " ║    ║ " + seat[38] + " ║║ " + seat[39] + " ║ | B");
+                "E | ║ " + seat[32] + " ║║ " + seat[33] + " ║   ║ " + seat[34] + " ║║ " + seat[35] + " ║║ " + seat[36]
+                        + " ║║ " + seat[37] + " ║    ║ " + seat[38] + " ║║ " + seat[39] + " ║ | E");
 
         System.err.println("  | ╚═══╝╚═══╝   ╚═══╝╚═══╝╚═══╝╚═══╝    ╚═══╝╚═══╝ | ");
         // ---------------------------------------------------F-----------------------------------------------
         System.out.println(
-                "B | ║ " + seat[40] + " ║║ " + seat[41] + " ║   ║ " + seat[42] + " ║║ " + seat[43] + " ║║ " + seat[44]
-                        + " ║║ " + seat[45] + " ║    ║ " + seat[46] + " ║║ " + seat[47] + " ║ | B");
+                "F | ║ " + seat[40] + " ║║ " + seat[41] + " ║   ║ " + seat[42] + " ║║ " + seat[43] + " ║║ " + seat[44]
+                        + " ║║ " + seat[45] + " ║    ║ " + seat[46] + " ║║ " + seat[47] + " ║ | F");
 
         System.err.println("  | ╚═══╝╚═══╝   ╚═══╝╚═══╝╚═══╝╚═══╝    ╚═══╝╚═══╝ | ");
+        System.out.println("T : taken by others");
+        System.out.println("X : booked by you");
+        System.out.println("===========================================================================");
     }
 
     // initiaslise array used for seats booking
-    void initialiser(String[] origin, String[] seat) {
+    void copy(String[] origin, String[] seat) {
         for (int i = 0; i < origin.length; i++) {
             seat[i] = origin[i];
         }

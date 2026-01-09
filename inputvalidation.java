@@ -53,6 +53,8 @@ public class inputvalidation {
                 break;
             } else if (code.equals("C")) {
                 break;
+            } else if (code.equals("P")) {
+                break;
             }
 
         }
@@ -126,5 +128,18 @@ public class inputvalidation {
     boolean isInRange(int value, int min, int max) {
         return value >= min && value <= max;
     }
+
+    // allow the enter to continue so that the user can read the output before
+    // continuing
+    void pressEnterToContinue(Scanner keyboard) {
+        System.out.println("Press Enter key to continue...");
+        try {
+            System.in.read();
+            keyboard.nextLine();
+            keyboard.close();
+        } catch (Exception e) {
+        }
+    }
+    // https://stackoverflow.com/questions/19870467/how-do-i-get-press-any-key-to-continue-to-work-in-my-java-code
 
 }
